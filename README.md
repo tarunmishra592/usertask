@@ -1,6 +1,13 @@
 # Usertask
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
+# Angular
+Version 15.0.2.
+
+# Angular Material
+Version 15.2.9
+
+# ngx-toastr
+For toast messages
 
 ## Development server
 
