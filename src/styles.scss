@@ -1,1 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body, h1, h2, h3, h4, h5, h6, p, span, strong, div, input, textarea, button, table, tr, td{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+input, textarea, button{
+    outline: none !important;
+    box-shadow: none !important;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.item-form.add{
+    padding: 20px;
+    border-radius: 8px;
+}
+.item-form.edit{
+    form{
+        border-radius: 0;
+    }
+}
+.item-form{
+    width: 500px;
+    margin: auto;
+    margin-top: 20px;
+    form{
+        background: #f1f1f1;
+        padding: 20px;
+        border-radius: 10px;
+        input{
+            height: 43px;
+            font-size: 14px;
+        }
+    }
+    h2{
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+    h3{
+        font-size: 24px;
+        padding-left: 22px;
+    }
+    .form-group{
+        margin-bottom: 15px;
+    }
+    .form-group-btn{
+        button{
+            margin-left: 8px;
+        }
+    }
+}

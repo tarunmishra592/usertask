@@ -1,0 +1,48 @@
+.item-list{
+    width: 900px;
+    margin: auto;
+    table{
+        margin-top: 20px;
+        border: solid 1px #ede9e9;
+        tr{
+            th{
+                border: solid 1px #1882eb;
+                background: #72b5f6;
+            }
+            th.action{
+                width: 100px;
+                text-align: center;
+            }
+            td{
+                border: solid 1px #ccc;
+                font-size: 13px;
+                i{
+                    font-size: 14px;
+                    padding: 4px 7px;
+                    border-radius: 4px;
+                    margin: 0px 4px;
+                    color: #fff;
+                    cursor: pointer;
+                    &:hover{
+                        opacity: 0.8;
+                    }
+                }
+                i.edit{
+                    background: #0ab413;
+                }
+                i.delete{
+                    background: rgb(255, 81, 0);
+                }
+            }
+            td.action-btns{
+                text-align: center;
+            }
+            td.empty{
+                text-align: center;
+                a{
+                    color: #1882eb;
+                }
+            }
+        }
+    }
+}

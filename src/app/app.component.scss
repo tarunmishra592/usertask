@@ -1,0 +1,13 @@
+.navbar{
+    justify-content: space-between;
+    .nav{
+        a{
+            font-size: 13px;
+        }
+        .item{
+            margin-right: 15px;
+            padding: 7px 10px;
+            text-decoration: none;
+        }
+    }
+}
