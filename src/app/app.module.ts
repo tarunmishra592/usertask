@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Routing
@@ -19,6 +20,9 @@ import { ToastrModule } from 'ngx-toastr';
 // Services
 import { ValidationService } from '../Services/validation.service';
 
+// Pipe
+import { SearchPipe } from 'src/Pipe/Search.pipe';
+
 // Material Modules
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
@@ -33,10 +37,12 @@ import {MatCardModule} from '@angular/material/card';
     ItemListComponent,
     EditItemComponent,
     ShowErrorsComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),

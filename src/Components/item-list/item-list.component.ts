@@ -11,6 +11,7 @@ import { EditItemComponent } from '../edit-item/edit-item.component';
 export class ItemListComponent {
   
   allList: ItemList[] = []
+  searchText: string = ''
 
   constructor(public dialog: MatDialog){
   }

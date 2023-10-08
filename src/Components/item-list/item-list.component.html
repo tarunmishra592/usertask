@@ -1,4 +1,8 @@
 <div class="item-list">
+    <div class="search">
+        <h3>Item List</h3>
+        <input class="form-control" type="text" [disabled]="allList.length == 0" placeholder="Search" [(ngModel)]="searchText">
+    </div>
     <table class="table">
         <thead>
             <tr>
@@ -8,7 +12,7 @@
             </tr>
         </thead>
         <tbody *ngIf="allList">
-            <tr *ngFor="let item of allList; let i = index">
+            <tr *ngFor="let item of allList | search: searchText; let i = index">
                 <td>{{item.name}}</td>
                 <td>{{item.price}}</td>
                 <td class="action-btns">
