@@ -5,17 +5,18 @@ import { Injectable } from '@angular/core';
 })
 export class ValidationService {
 
-  static getValidatorErrorMessage(validatorName: any, validatorValue?: any): any {
+  static getValidatorErrorMessage(validatorName: any, validatorValue?: any, propertyName?: any): any {
     const config: any = {
       required: 'Required',
       invalidName: 'Please enter valid name.',
-      invalidNumber: 'Please enter valid number.'
+      invalidNumber: 'Please enter valid number.',
+      maxlength: 'Name can be max 12 characters long.',
+      minlength: 'Name must be min 2 characters long.'
     }
     return config[validatorName];
   }
 
   static nameValidation(control: any): any {
-    console.log('control', control)
     if (control?.value?.match(/^[A-Za-z ]+$/)) {
       return null;
     } else {

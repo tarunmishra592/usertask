@@ -27,7 +27,7 @@ export class EditItemComponent {
 
   initForm(): void {
     this.editItemForm = this._fb.group({
-      name: [this.data.item.name, [Validators.required, ValidationService.nameValidation]],
+      name: [this.data.item.name, [Validators.required, Validators.minLength(2), Validators.maxLength(12), ValidationService.nameValidation]],
       price: [this.data.item.price, [Validators.required, ValidationService.numberValidation]]
     });
   }

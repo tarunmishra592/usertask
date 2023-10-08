@@ -23,13 +23,12 @@ export class AddItemComponent {
 
   initForm(): void {
     this.addItemForm = this._fb.group({
-      name: ['', [Validators.required, ValidationService.nameValidation]],
+      name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(12), ValidationService.nameValidation]],
       price: ['', [Validators.required, ValidationService.numberValidation]]
     });
   }
 
   addItem():void {
-    console.log(this.addItemForm.value)
     const itemVal: ItemList = this.addItemForm.value;
     let addedItems;
     addedItems = localStorage.getItem('addedItems');
