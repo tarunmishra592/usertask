@@ -16,7 +16,7 @@ export class ValidationService {
 
   static nameValidation(control: any): any {
     console.log('control', control)
-    if (control?.value?.match(/^[A-Za-z0-9 ]+$/)) {
+    if (control?.value?.match(/^[A-Za-z ]+$/)) {
       return null;
     } else {
       return { invalidName: true };

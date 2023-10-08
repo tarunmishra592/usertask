@@ -34,15 +34,10 @@ export class AddItemComponent {
     let addedItems;
     addedItems = localStorage.getItem('addedItems');
     if(addedItems){
-      addedItems = JSON.parse(addedItems)
-      let isAdded = addedItems.find((x: ItemList) => x.name == itemVal.name)
-      if(!isAdded){
+        addedItems = JSON.parse(addedItems)
         addedItems.push(itemVal)
         this.toastService.success('Item added successfully..', 'Success!', {timeOut: 3000, closeButton: true})
         this.addItemForm.reset()
-      }else{
-        this.toastService.error('Item already exists.', 'Error', {timeOut: 3000, closeButton: true})
-      }
     }else{
       addedItems = [itemVal]
       this.addItemForm.reset()

@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { ValidationService } from 'src/Services/validation.service';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
-import { ItemList } from 'src/Models/Itemlist';
+import { EditData, ItemList } from 'src/Models/Itemlist';
 @Component({
   selector: 'app-edit-item',
   templateUrl: './edit-item.component.html',
@@ -17,7 +17,7 @@ export class EditItemComponent {
     private _fb: FormBuilder, 
     private toastService: ToastrService,
     public dialogRef: MatDialogRef<EditItemComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: ItemList,
+    @Inject(MAT_DIALOG_DATA) public data: EditData
     ){
   }
 
@@ -27,8 +27,8 @@ export class EditItemComponent {
 
   initForm(): void {
     this.editItemForm = this._fb.group({
-      name: [this.data.name, [Validators.required, ValidationService.nameValidation]],
-      price: [this.data.price, [Validators.required, ValidationService.numberValidation]]
+      name: [this.data.item.name, [Validators.required, ValidationService.nameValidation]],
+      price: [this.data.item.price, [Validators.required, ValidationService.numberValidation]]
     });
   }
 

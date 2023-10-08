@@ -24,11 +24,13 @@ export class ItemListComponent {
 
   editHandler(data: ItemList){
     const dialogRef = this.dialog.open(EditItemComponent, {
-      data: data,
+      data: {item:data, list: this.allList},
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      this.allList = result
+      if(result){
+        this.allList = result
+      }
     });
   }
 
