@@ -5,6 +5,7 @@ Version 15.0.2.
 Version 15.2.9
 
 # ngx-toastr
+Version 16.2.0
 For toast messages
 
 ## Development server
